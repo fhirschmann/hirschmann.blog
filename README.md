@@ -12,17 +12,25 @@ npm run build    # static build to dist/
 
 ## Deployment
 
-Hosted on **Cloudflare Pages** (project `hirschmann-blog`, Git integration with
-this repository). Every push to `master` triggers a Cloudflare build:
+Hosted on **Cloudflare Pages**, project `hirschmann-blog`, connected to this
+repository through Cloudflare's GitHub integration. Every push to `master` triggers
+a build; other branches get a preview deployment under `*.hirschmann-blog.pages.dev`.
 
 | Setting | Value |
 |---|---|
 | Build command | `npm run build` |
 | Output directory | `dist` |
-| Node version | `.node-version` (22) |
+| Node version | pinned to 22 via `.node-version` |
+| Production branch | `master` |
 
-Production domain: <https://hirschmann.blog> (plus `www`, which redirects).
-Pushes to other branches get a preview deployment under `*.hirschmann-blog.pages.dev`.
+Domains (zone `hirschmann.blog` lives in the same Cloudflare account):
+
+- `hirschmann.blog` and `www.hirschmann.blog` are custom domains of the Pages
+  project; both DNS records are proxied CNAMEs to `hirschmann-blog.pages.dev`.
+- A redirect rule *"www zu hirschmann.blog (301)"* sends `www` to the apex,
+  keeping path and query string.
+- `build.format: 'file'` keeps the old Jekyll URLs alive: Cloudflare serves
+  `/legal` directly and 308-redirects `/legal.html` to it.
 
 GitHub Pages is **no longer used**. It was switched off in September 2026: a custom
 domain on a GitHub *user* site makes `fhirschmann.github.io` permanently redirect to
