@@ -1,4 +1,4 @@
-# fhirschmann.github.io
+# hirschmann.blog
 
 Personal website of Fabian Hirschmann, built with [Astro](https://astro.build).
 
@@ -24,6 +24,8 @@ this repository). Every push to `master` triggers a Cloudflare build:
 Production domain: <https://hirschmann.blog> (plus `www`, which redirects).
 Pushes to other branches get a preview deployment under `*.hirschmann-blog.pages.dev`.
 
-GitHub Pages is **no longer used** — it was switched off in September 2026 so that
-the `fhirschmann.github.io` address is free again (a custom domain on a GitHub user
-site makes `*.github.io` redirect to that domain, which is exactly what we didn't want).
+GitHub Pages is **no longer used**. It was switched off in September 2026: a custom
+domain on a GitHub *user* site makes `fhirschmann.github.io` permanently redirect to
+that domain. The repository was renamed from `fhirschmann.github.io` to
+`hirschmann.blog` at the same time, which frees the `fhirschmann.github.io` name for
+an actual GitHub user page later on.
