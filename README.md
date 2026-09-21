@@ -12,7 +12,18 @@ npm run build    # static build to dist/
 
 ## Deployment
 
-Pushing to `master` triggers the GitHub Actions workflow in
-`.github/workflows/deploy.yml`, which builds the site and deploys it to
-GitHub Pages. The repository's Pages source must be set to
-**GitHub Actions** (Settings → Pages → Build and deployment).
+Hosted on **Cloudflare Pages** (project `hirschmann-blog`, Git integration with
+this repository). Every push to `master` triggers a Cloudflare build:
+
+| Setting | Value |
+|---|---|
+| Build command | `npm run build` |
+| Output directory | `dist` |
+| Node version | `.node-version` (22) |
+
+Production domain: <https://hirschmann.blog> (plus `www`, which redirects).
+Pushes to other branches get a preview deployment under `*.hirschmann-blog.pages.dev`.
+
+GitHub Pages is **no longer used** — it was switched off in September 2026 so that
+the `fhirschmann.github.io` address is free again (a custom domain on a GitHub user
+site makes `*.github.io` redirect to that domain, which is exactly what we didn't want).
