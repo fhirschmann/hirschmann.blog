@@ -482,18 +482,16 @@ a {
 }
 
 .project-preview {
-  /* Lift the opaque frame above the page-wide CRT overlays. Its own overlay
+  /* Lift the opaque image above the page-wide CRT overlays. Its own overlay
      below can disappear completely when the original image is revealed. */
   position: relative;
   z-index: 62;
   width: 100%;
   padding: 0;
   overflow: hidden;
-  border: 1px solid var(--green-dim);
+  border: 0;
   border-radius: 0;
   background: var(--bg-2);
-  color: var(--muted);
-  text-align: left;
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
 }
@@ -525,21 +523,6 @@ a {
   transition: opacity 0.2s steps(4);
 }
 
-.project-preview-caption {
-  display: flex;
-  justify-content: space-between;
-  gap: 0.5rem;
-  padding: 0.45rem 0.6rem;
-  border-top: 1px solid var(--green-dim);
-  font-family: var(--mono);
-  font-size: 0.6rem;
-  line-height: 1.5;
-}
-
-.preview-hint-touch {
-  display: none;
-}
-
 .project-preview:focus-visible {
   outline: 2px solid var(--cyan);
   outline-offset: 4px;
@@ -560,16 +543,6 @@ a {
 
   .project-preview:hover .project-image::after {
     opacity: 0;
-  }
-}
-
-@media (hover: none), (pointer: coarse) {
-  .preview-hint-hover {
-    display: none;
-  }
-
-  .preview-hint-touch {
-    display: inline;
   }
 }
 

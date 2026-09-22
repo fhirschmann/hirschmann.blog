@@ -8,7 +8,6 @@ export interface Project {
     src: string;
     srcset: string;
     alt: string;
-    caption: string;
   };
 }
 
@@ -23,7 +22,6 @@ export const projects: Project[] = [
       src: '/projects/unraid-passkey-480.webp',
       srcset: '/projects/unraid-passkey-480.webp 480w, /projects/unraid-passkey-960.webp 960w',
       alt: 'Unraid login page with username and password fields and the Login with passkey button.',
-      caption: 'login.webp',
     },
   },
   {
@@ -35,7 +33,6 @@ export const projects: Project[] = [
       src: '/projects/leoino-480.webp',
       srcset: '/projects/leoino-480.webp 480w, /projects/leoino-960.webp 960w',
       alt: 'Studio render of the LEO INDUSTRIES AT-1 audio player with a copper speaker grille, white front, turquoise details and six playback keys.',
-      caption: 'render.webp',
     },
   },
   {
@@ -47,7 +44,6 @@ export const projects: Project[] = [
       src: '/projects/leo-ac1-480.webp',
       srcset: '/projects/leo-ac1-480.webp 480w, /projects/leo-ac1-960.webp 960w',
       alt: 'Studio render of the white LEO INDUSTRIES AC-1 miniature air-conditioner-style fan with a grey circular grille and folding handle.',
-      caption: 'render.webp',
     },
   },
 ];
