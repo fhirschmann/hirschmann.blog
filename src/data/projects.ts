@@ -38,8 +38,8 @@ export const projects: Project[] = [
   {
     name: 'leo-ac1',
     meta: 'OpenSCAD · 2026',
-    href: 'https://fhirschmann.github.io/leo-ac1/',
-    desc: 'A battery-powered desk fan disguised as a miniature air conditioner — a custom 3D-printed enclosure, a quiet 140 mm fan, variable speed and USB-C charging. Explore the build in the interactive 3D viewer.',
+    href: 'https://github.com/fhirschmann/leo-ac1',
+    desc: 'A battery-powered desk fan disguised as a miniature air conditioner — a custom 3D-printed enclosure, a quiet 140 mm fan, variable speed and USB-C charging.',
     image: {
       src: '/projects/leo-ac1-480.webp',
       srcset: '/projects/leo-ac1-480.webp 480w, /projects/leo-ac1-960.webp 960w',
