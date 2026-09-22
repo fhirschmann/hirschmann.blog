@@ -9,8 +9,7 @@ import { projects, archived } from '../data/projects';
   description="Personal open-source and hobby projects by Fabian Hirschmann."
 >
   <main class="wrap">
-    <p class="section-cmd reveal" style="--d:0s; margin-top: 2.2rem;">$ ls -la ~/projects</p>
-    <h1 class="page-title reveal" style="--d:.1s; margin-top: 0;">Projects</h1>
+    <h1 class="page-title reveal" style="--d:.1s;">Projects</h1>
     <p class="section-note reveal" style="--d:.15s"># personal open-source &amp; hobby projects — built for fun, provided as-is</p>
 
     <ProjectRows
@@ -20,13 +19,12 @@ import { projects, archived } from '../data/projects';
     />
 
     <section id="archived" class="section reveal" style="--d:.3s; padding-bottom: clamp(2.5rem, 7vh, 4.5rem);">
-      <p class="section-cmd">$ ls -la ~/projects/.archive</p>
       <div class="section-head">
         <span class="index"></span>
         <h2>Archived</h2>
       </div>
       <p class="section-note"># no longer maintained — kept around for reference</p>
-      <ProjectRows projects={archived} perms="dr-x" />
+      <ProjectRows projects={archived} />
     </section>
   </main>
 </Base>

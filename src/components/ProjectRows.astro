@@ -4,12 +4,11 @@ import type { Project } from '../data/projects';
 interface Props {
   projects: Project[];
   compact?: boolean;
-  perms?: string;
   class?: string;
   style?: string;
 }
 
-const { projects, compact = false, perms = 'drwx', class: className, style } = Astro.props;
+const { projects, compact = false, class: className, style } = Astro.props;
 ---
 
 <ul class:list={['rows', { 'rows-compact': compact }, className]} style={style}>
@@ -39,7 +38,6 @@ const { projects, compact = false, perms = 'drwx', class: className, style } = A
         )}
         <div class="project-info">
           <a class="row" href={p.href} target="_blank" rel="noopener">
-            <span class="row-num">{perms}</span>
             <span class="row-title">{p.name}</span>
             <span class="row-meta">
               {p.meta}
