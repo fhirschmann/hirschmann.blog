@@ -4,6 +4,12 @@ export interface Project {
   href: string;
   desc: string;
   status?: string;
+  image?: {
+    src: string;
+    srcset: string;
+    alt: string;
+    caption: string;
+  };
 }
 
 // Maintained (or at least not archived) projects — shown on home and /projects.
@@ -13,12 +19,36 @@ export const projects: Project[] = [
     meta: 'PHP · 2026',
     href: 'https://github.com/fhirschmann/unraid-passkey',
     desc: "Adds passwordless passkey (WebAuthn) login to the Unraid web GUI — self-contained in Unraid's own nginx/PHP stack, with no cloud service, Docker container, or OIDC provider involved.",
+    image: {
+      src: '/projects/unraid-passkey-480.webp',
+      srcset: '/projects/unraid-passkey-480.webp 480w, /projects/unraid-passkey-960.webp 960w',
+      alt: 'Unraid login page with username and password fields and the Login with passkey button.',
+      caption: 'login.webp',
+    },
   },
   {
     name: 'leoino',
     meta: 'C++ · 2026',
     href: 'https://github.com/fhirschmann/leoino',
-    desc: 'An ESP32 music player driven entirely by RFID tags — tap a card and a playlist starts, no screen or buttons needed.',
+    desc: 'An ESP32 music player with RFID cartridges, tactile playback buttons and a custom 3D-printed enclosure — complete with an OLED display and a cyberpunk web interface.',
+    image: {
+      src: '/projects/leoino-480.webp',
+      srcset: '/projects/leoino-480.webp 480w, /projects/leoino-960.webp 960w',
+      alt: 'Studio render of the LEO INDUSTRIES AT-1 audio player with a copper speaker grille, white front, turquoise details and six playback keys.',
+      caption: 'render.webp',
+    },
+  },
+  {
+    name: 'leo-ac1',
+    meta: 'OpenSCAD · 2026',
+    href: 'https://fhirschmann.github.io/leo-ac1/',
+    desc: 'A battery-powered desk fan disguised as a miniature air conditioner — a custom 3D-printed enclosure, a quiet 140 mm fan, variable speed and USB-C charging. Explore the build in the interactive 3D viewer.',
+    image: {
+      src: '/projects/leo-ac1-480.webp',
+      srcset: '/projects/leo-ac1-480.webp 480w, /projects/leo-ac1-960.webp 960w',
+      alt: 'Studio render of the white LEO INDUSTRIES AC-1 miniature air-conditioner-style fan with a grey circular grille and folding handle.',
+      caption: 'render.webp',
+    },
   },
 ];
 

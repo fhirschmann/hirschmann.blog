@@ -3,29 +3,67 @@ import type { Project } from '../data/projects';
 
 interface Props {
   projects: Project[];
+  compact?: boolean;
   perms?: string;
   class?: string;
   style?: string;
 }
 
-const { projects, perms = 'drwx', class: className, style } = Astro.props;
+const { projects, compact = false, perms = 'drwx', class: className, style } = Astro.props;
 ---
 
-<ul class:list={['rows', className]} style={style}>
+<ul class:list={['rows', { 'rows-compact': compact }, className]} style={style}>
   {
     projects.map((p) => (
-      <li>
-        <a class="row" href={p.href} target="_blank" rel="noopener">
-          <span class="row-num">{perms}</span>
-          <span class="row-title">{p.name}</span>
-          <span class="row-meta">
-            {p.meta}
-            {p.status && <span class="stale"> [{p.status}]</span>}
-          </span>
-          <span class="row-arrow">[↗]</span>
-        </a>
-        <p class="row-desc">{p.desc}</p>
+      <li class:list={{ 'project-entry': p.image }}>
+        {p.image && (
+          <button
+            class="project-preview"
+            type="button"
+            aria-label={`Show ${p.name} in original colour`}
+            aria-pressed="false"
+          >
+            <span class="project-image">
+              <img
+                src={p.image.src}
+                srcset={p.image.srcset}
+                sizes={compact ? '(max-width: 680px) 224px, 192px' : '(max-width: 680px) 90vw, 248px'}
+                alt={p.image.alt}
+                width="480"
+                height="360"
+                loading="lazy"
+                decoding="async"
+              />
+            </span>
+            <span class="project-preview-caption" aria-hidden="true">
+              <span>{p.image.caption}</span>
+              <span class="preview-hint-hover">hover: colour</span>
+              <span class="preview-hint-touch">tap: colour</span>
+            </span>
+          </button>
+        )}
+        <div class="project-info">
+          <a class="row" href={p.href} target="_blank" rel="noopener">
+            <span class="row-num">{perms}</span>
+            <span class="row-title">{p.name}</span>
+            <span class="row-meta">
+              {p.meta}
+              {p.status && <span class="stale"> [{p.status}]</span>}
+            </span>
+            <span class="row-arrow">[↗]</span>
+          </a>
+          <p class="row-desc">{p.desc}</p>
+        </div>
       </li>
     ))
   }
 </ul>
+
+<script>
+  document.querySelectorAll<HTMLButtonElement>('.project-preview').forEach((button) => {
+    button.addEventListener('click', () => {
+      const pressed = button.getAttribute('aria-pressed') === 'true';
+      button.setAttribute('aria-pressed', String(!pressed));
+    });
+  });
+</script>

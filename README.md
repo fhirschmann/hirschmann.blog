@@ -10,6 +10,12 @@ npm run dev      # dev server at http://localhost:4321
 npm run build    # static build to dist/
 ```
 
+Active projects share an illustrated terminal listing on the home and projects
+pages, with smaller previews on the home page. Images reveal their original colours
+on hover or keyboard focus; tapping an image toggles the colour view on touch screens.
+Asset sources and generation
+prompts are documented in [docs/project-images.md](docs/project-images.md).
+
 ## Deployment
 
 Hosted on **Cloudflare Pages**, project `hirschmann-blog`, connected to this
