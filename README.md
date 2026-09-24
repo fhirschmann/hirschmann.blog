@@ -12,7 +12,7 @@ npm run build    # static build to dist/
 
 Active projects share an illustrated terminal listing on the home and projects
 pages, with smaller previews on the home page. Images reveal their original colours
-on hover or keyboard focus; tapping an image toggles the colour view on touch screens.
+on hover or keyboard focus; clicking or tapping an image opens its project page in a new tab.
 Asset sources and generation
 prompts are documented in [docs/project-images.md](docs/project-images.md).
 

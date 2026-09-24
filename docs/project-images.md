@@ -2,9 +2,10 @@
 
 The active project list on the home page and /projects uses responsive 480 px and
 960 px WebP assets from `public/projects/`. All originals are clean colour images;
-the CRT tint and scanlines are applied in CSS and removed on hover, keyboard focus,
-or the image button's touch/click toggle. The framed image sits above the global CRT
-overlay so the revealed original has no scanlines from the rest of the page.
+the CRT tint and scanlines are applied in CSS and removed on hover or keyboard focus.
+Clicking or tapping an image opens its project page in a new tab. The framed image
+sits above the global CRT overlay so the revealed original has no scanlines from
+the rest of the page.
 
 - `leo-ac1-{480,960}.webp`: AI studio render based on the project's public CAD
   assembly and front-logo views.

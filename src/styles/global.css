@@ -411,11 +411,11 @@ a {
   outline-offset: 4px;
 }
 
-.project-preview:is(:focus-visible, [aria-pressed='true']) .project-image img {
+.project-preview:focus-visible .project-image img {
   filter: none;
 }
 
-.project-preview:is(:focus-visible, [aria-pressed='true']) .project-image::after {
+.project-preview:focus-visible .project-image::after {
   opacity: 0;
 }
 

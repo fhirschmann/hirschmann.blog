@@ -16,11 +16,12 @@ const { projects, compact = false, class: className, style } = Astro.props;
     projects.map((p) => (
       <li class:list={{ 'project-entry': p.image }}>
         {p.image && (
-          <button
+          <a
             class="project-preview"
-            type="button"
-            aria-label={`Show ${p.name} in original colour`}
-            aria-pressed="false"
+            href={p.href}
+            target="_blank"
+            rel="noopener"
+            aria-label={`Open ${p.name} project (opens in a new tab)`}
           >
             <span class="project-image">
               <img
@@ -34,7 +35,7 @@ const { projects, compact = false, class: className, style } = Astro.props;
                 decoding="async"
               />
             </span>
-          </button>
+          </a>
         )}
         <div class="project-info">
           <a class="row" href={p.href} target="_blank" rel="noopener">
@@ -51,12 +52,3 @@ const { projects, compact = false, class: className, style } = Astro.props;
     ))
   }
 </ul>
-
-<script>
-  document.querySelectorAll<HTMLButtonElement>('.project-preview').forEach((button) => {
-    button.addEventListener('click', () => {
-      const pressed = button.getAttribute('aria-pressed') === 'true';
-      button.setAttribute('aria-pressed', String(!pressed));
-    });
-  });
-</script>
