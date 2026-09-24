@@ -25,7 +25,7 @@ export const projects: Project[] = [
     },
   },
   {
-    name: 'leoino',
+    name: 'leo-at1',
     meta: 'C++ · 2026',
     href: 'https://github.com/fhirschmann/leoino',
     desc: 'An ESP32 music player with RFID cartridges, tactile playback buttons and a custom 3D-printed enclosure — complete with an OLED display and a cyberpunk web interface.',
