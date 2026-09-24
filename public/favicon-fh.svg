@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" shape-rendering="crispEdges">
-  <title>Fabian Hirschmann</title>
-  <rect width="16" height="16" rx="2" fill="#143723"/>
-  <path d="M2 1h12v1h1v12h-1v1H2v-1H1V2h1Z" fill="#050507"/>
-  <path d="M2 3h5v2H4v2h3v2H4v3H2Z" fill="#3dff73"/>
-  <path d="M9 3h2v4h1V3h2v9h-2V9h-1v3H9Z" fill="#2ee6ff"/>
-  <path d="M12 13h2v1h-2Z" fill="#ff2e88"/>
-</svg>
