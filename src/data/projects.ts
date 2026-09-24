@@ -14,7 +14,7 @@ export interface Project {
 // Maintained (or at least not archived) projects — shown on home and /projects.
 export const projects: Project[] = [
   {
-    name: 'unraid-passkey',
+    name: 'Passkeys for Unraid',
     meta: 'PHP · 2026',
     href: 'https://github.com/fhirschmann/unraid-passkey',
     desc: "Adds passwordless passkey (WebAuthn) login to the Unraid web GUI — self-contained in Unraid's own nginx/PHP stack, with no cloud service, Docker container, or OIDC provider involved.",
@@ -25,7 +25,7 @@ export const projects: Project[] = [
     },
   },
   {
-    name: 'leo-at1',
+    name: 'Leo Industries AT-1',
     meta: 'C++ · 2026',
     href: 'https://github.com/fhirschmann/leoino',
     desc: 'An ESP32 music player with RFID cartridges, tactile playback buttons and a custom 3D-printed enclosure — complete with an OLED display and a cyberpunk web interface.',
@@ -36,7 +36,7 @@ export const projects: Project[] = [
     },
   },
   {
-    name: 'leo-ac1',
+    name: 'Leo Industries AC-1',
     meta: 'OpenSCAD · 2026',
     href: 'https://github.com/fhirschmann/leo-ac1',
     desc: 'A battery-powered desk fan disguised as a miniature air conditioner — a custom 3D-printed enclosure, a quiet 140 mm fan, variable speed and USB-C charging.',
